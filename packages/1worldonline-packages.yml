@@ -1,0 +1,25 @@
+generated: '2026-09-05'
+method: searched
+source: npm, PyPI registry metadata endpoints and the 1World Online GitHub accounts
+packages: []
+official_count: 0
+note: >-
+  No first-party client library or SDK was found. npm (1worldonline, oneworldonline, 1world-online,
+  @1worldonline/sdk) and PyPI (1worldonline, oneworldonline) all return 404. 1World Online holds two
+  GitHub accounts — github.com/1worldonline (0 public repositories) and github.com/1worldonline-rnd
+  (1 public repository, 1w-loyalty-frontend, a Next.js application, not a distributable client
+  library). No SDKs pointer is emitted, because none exists to point at.
+registries_probed:
+- registry: npm
+  names: ['1worldonline', 'oneworldonline', '1world-online', '@1worldonline/sdk']
+  result: 404
+- registry: pypi
+  names: ['1worldonline', 'oneworldonline']
+  result: 404
+- registry: github
+  names: ['1worldonline', '1worldonline-rnd']
+  result: 200
+  note: >-
+    1worldonline-rnd/1w-loyalty-frontend is a first-party TypeScript/Next.js front-end for the
+    loyalty product, last pushed 2024-06-14. It contains an internal axios client for the loyalty
+    backend but is an application, not a published package, and carries no registry release.

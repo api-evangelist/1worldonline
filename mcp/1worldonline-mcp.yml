@@ -1,0 +1,18 @@
+generated: '2026-09-05'
+method: searched
+status: none
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+server: null
+tools: []
+note: >-
+  1World Online ships no hosted/remote MCP server and no local stdio MCP package. Nothing was found
+  on npm, in either GitHub account, or on any 1World Online host, and no MCP endpoint is advertised
+  in the site, the frontend configuration, or any /.well-known document (all of which 404). No
+  candidate tool list was derived either: candidate derivation requires an OpenAPI to bind tools to,
+  and 1World Online publishes no machine-readable contract. No MCPServer pointer is emitted.

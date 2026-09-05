@@ -1,0 +1,382 @@
+generated: '2026-09-05'
+method: probed
+source: live GET of the named /.well-known path list on every host in apis.yml plus the API and app hosts named
+  by 1World Online’s own frontend configuration
+hit_count: 0
+hosts:
+- host: https://1worldonline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+    note: null
+  - path: /apis.json
+    status: 404
+    file: null
+    note: null
+  - path: /apis.yml
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    note: null
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/1worldonline-negative-control-8d9b5c33.json
+    status: 404
+    bytes: 21451
+    result: passed
+  path_echo_control: passed
+- host: https://welcome.1worldonline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+    note: null
+  - path: /apis.json
+    status: 404
+    file: null
+    note: null
+  - path: /apis.yml
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    note: null
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/1worldonline-negative-control-b692f5d5.json
+    status: 404
+    bytes: 3098
+    result: passed
+  path_echo_control: passed
+- host: https://frontend-wleu.1worldonline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/api-catalog.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/apis.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /apis.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /apis.yml
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/1worldonline-negative-control-f1ac40f9.json
+    status: 200
+    bytes: 11602
+    result: failed
+  path_echo_control: failed
+  note: Every /.well-known/* path and the negative control return HTTP 200 with the same single-page-app HTML shell
+    (11602 bytes). No document is served here; no pointer emitted.
+- host: https://app-wleu.1worldonline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+    note: null
+  - path: /apis.json
+    status: 404
+    file: null
+    note: null
+  - path: /apis.yml
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    note: null
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/1worldonline-negative-control-34db8fc7.json
+    status: 404
+    bytes: 202
+    result: passed
+  path_echo_control: passed
+- host: https://portal-wleu.1worldonline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/api-catalog.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/apis.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /apis.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /apis.yml
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: HTML shell from a catch-all route, not a document
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/1worldonline-negative-control-742a33b3.json
+    status: 200
+    bytes: 2225
+    result: failed
+  path_echo_control: failed
+  note: Every /.well-known/* path and the negative control return HTTP 200 with the same single-page-app HTML shell
+    (2225 bytes). No document is served here; no pointer emitted.
+- host: https://widget-frontend-wleu.1worldonline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+    note: null
+  - path: /apis.json
+    status: 404
+    file: null
+    note: null
+  - path: /apis.yml
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    note: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    note: null
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/1worldonline-negative-control-305ae8c6.json
+    status: 404
+    bytes: 6172
+    result: passed
+  path_echo_control: passed
+note: No /.well-known document is served on any 1World Online host. 1worldonline.com, welcome.1worldonline.com and
+  widget-frontend-wleu.1worldonline.com return a real 404 for every path; app-wleu.1worldonline.com returns a Spring
+  Boot JSON 404; frontend-wleu.1worldonline.com and portal-wleu.1worldonline.com are single-page-app catch-alls
+  that answer 200 with an HTML shell for every path INCLUDING a negative-control path that cannot exist, so their
+  200s are discarded. No WellKnown, SecurityTxt, APICatalog or AgentCard pointer is emitted — this file records
+  an absence.

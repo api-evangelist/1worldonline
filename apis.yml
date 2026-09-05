@@ -1,18 +1,60 @@
 aid: 1worldonline
 name: 1World Online
-description: '1World Online is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  1World Online is an audience-engagement and interactive-advertising company, operating since 2012,
+  that serves media publishers, advertisers and travel brands. Its platform embeds Interactive Media
+  Units — polls, quizzes, trivia, debates and surveys — into publisher pages in 30+ languages, turns
+  the resulting engagement into interactive ad inventory and first-party audience insight, and rewards
+  participants through a points-based loyalty program and Web3 collectables (TravelVerse). The company
+  also operates a technology center offering custom development and integration services. Its platform
+  backend is live at app-wleu.1worldonline.com and serves the publisher portal, widget frontend and
+  loyalty applications, but 1World Online publishes no public developer portal, API reference or
+  machine-readable contract today, and the historic public Swagger UI host api.1worldonline.com no
+  longer resolves.
+image: https://1worldonline.com/images/logo.svg
 url: https://raw.githubusercontent.com/api-evangelist/1worldonline/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
-- Company
-apis: []
+- Advertising
+- Audience Engagement
+- Polls
+- Surveys
+- Quizzes
+- Loyalty
+- Media
+- Publishing
+- Widgets
+- Web3
+apis:
+- aid: 1worldonline-platform
+  name: 1World Platform API
+  description: >-
+    The first-party HTTP backend behind the 1World Online publisher portal, widget frontend and
+    loyalty applications. Its host is declared by 1World Online's own frontend configuration
+    (URL_SERVER_API_NEW) and confirmed by the Spring Boot Actuator index the host serves, whose
+    self href names the same host. The surface is partner/tenant-facing: no public reference,
+    OpenAPI, Swagger, GraphQL SDL or Postman collection is published, and every conventional
+    spec path on the host returns 404.
+  image: https://1worldonline.com/images/logo.svg
+  humanURL: https://welcome.1worldonline.com/
+  baseURL: https://app-wleu.1worldonline.com/
+  position: Producing
+  tags:
+  - Polls
+  - Surveys
+  - Loyalty
+  - Advertising
+  properties:
+  - type: Lifecycle
+    url: lifecycle/1worldonline-lifecycle.yml
+  - type: RateLimits
+    url: rate-limits/1worldonline-rate-limits.yml
+  - type: Plans
+    url: plans/1worldonline-plans-pricing.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +62,62 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/1worldonline
+  url: https://1worldonline.com/
+- type: Support
+  url: https://welcome.1worldonline.com/contact-us
+- type: SignUp
+  url: https://frontend-wleu.1worldonline.com/#!/become-partner
+- type: TermsOfService
+  url: https://welcome.1worldonline.com/terms
+- type: PrivacyPolicy
+  url: https://welcome.1worldonline.com/terms/privacy-policy
+- type: Blog
+  url: https://medium.com/@1WorldOnline
+- type: GitHubOrganization
+  url: https://github.com/1worldonline-rnd
+- type: LinkedIn
+  url: https://www.linkedin.com/company/1world-online/
+- type: Twitter
+  url: https://x.com/1World_Online/
+- type: YouTube
+  url: https://www.youtube.com/channel/UCFFAw-lm7sOEHjjKnt3OCaQ
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/1world-online/
+- type: DomainSecurity
+  url: security/1worldonline-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/1worldonline-lifecycle.yml
+- type: LLMsTxt
+  url: llms/1worldonline-llms.txt
+- type: Plans
+  url: plans/1worldonline-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/1worldonline-rate-limits.yml
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: >-
+    1World Online's platform backend is live at app-wleu.1worldonline.com and its own frontend
+    configuration names it, but the only route to it is the publisher/advertiser partner
+    registration SPA at frontend-wleu.1worldonline.com — the formerly public Swagger UI host
+    api.1worldonline.com no longer resolves in DNS, and the live backend returns 404 for every
+    conventional specification path.
+  evidence:
+  - url: https://api.1worldonline.com/
+    status: 0
+  - url: https://app-wleu.1worldonline.com/openapi.json
+    status: 404
+  - url: https://app-wleu.1worldonline.com/v3/api-docs
+    status: 404
+  - url: https://app-wleu.1worldonline.com/swagger-ui.html
+    status: 404
+  - url: https://portal-wleu.1worldonline.com/
+    status: 200
+  - url: https://app-wleu.1worldonline.com/actuator
+    status: 200
+  checked: '2026-09-05'

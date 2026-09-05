@@ -1,0 +1,56 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Live probes of 1World Online hosts on 2026-09-05, plus the Internet Archive CDX index for the
+  retired api.1worldonline.com documentation host.
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: >-
+    No public versioning policy is published. The live platform backend at app-wleu.1worldonline.com
+    exposes no version prefix on its error envelope and no documented version header.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No deprecation or Sunset/Deprecation (RFC 8594) policy is published.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+health_endpoint:
+  url: https://app-wleu.1worldonline.com/actuator/health
+  status: 200
+  body: '{"status":"UP"}'
+  kind: spring-boot-actuator
+  authenticated: false
+  note: >-
+    A live, unauthenticated Spring Boot Actuator health endpoint. This is an operational health
+    probe, NOT a public status page — no StatusPage pointer is emitted for it.
+observability_endpoints:
+- url: https://app-wleu.1worldonline.com/actuator
+  status: 200
+  note: >-
+    Actuator discovery index exposing health, health-path, info and metrics links. Its self href
+    names app-wleu.1worldonline.com, which is how first-party ownership of the API host was proven.
+retired_surfaces:
+- name: 1World Online Polls API (public Swagger UI)
+  host: api.1worldonline.com
+  state: gone
+  evidence:
+  - url: https://api.1worldonline.com/
+    status: 0
+    note: DNS does not resolve (NXDOMAIN) as of 2026-09-05.
+  - url: https://web.archive.org/cdx/search/cdx?url=api.1worldonline.com*
+    status: 200
+    note: >-
+      The Internet Archive CDX index records swagger-ui.js, swagger-oauth.js and the Swagger UI
+      asset tree served from this host through at least 2020-06-01, so a public Swagger interface
+      once existed at this address. The spec document itself was not recovered on this pass
+      (archive.org returned HTTP 429), and nothing archived was saved as a contract: a spec for a
+      host that no longer resolves is not a contract 1World Online currently serves.
+deprecated_operations: []
+note: >-
+  1World Online publishes no changelog, release notes, versioning policy, deprecation policy, SLA
+  or status page on any public host. The only live operational signal is the open Actuator health
+  endpoint above.

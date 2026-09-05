@@ -1,0 +1,20 @@
+generated: '2026-09-05'
+method: searched
+source: https://welcome.1worldonline.com/
+limit_count: 0
+rate_limits: []
+headers: []
+exhaustion_status: null
+note: >-
+  No published rate limits. 1World Online ships no public API reference, so no per-key, per-account
+  or per-endpoint quota, window, burst allowance or 429 behaviour is documented anywhere a
+  non-customer can read. No X-RateLimit-* or RateLimit-* header was observed on any unauthenticated
+  response from the live platform host either — its 404 and Actuator responses carry none. An
+  honest zero.
+evidence:
+- url: https://app-wleu.1worldonline.com/actuator/health
+  status: 200
+  note: Response carries no RateLimit-*, X-RateLimit-* or Retry-After header.
+- url: https://app-wleu.1worldonline.com/openapi.json
+  status: 404
+  note: No machine-readable contract to read limits from.

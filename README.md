@@ -64,5 +64,42 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-1World Online is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/1worldonline
+1World Online is an audience-engagement and interactive-advertising company, operating since 2012,
+that serves media publishers, advertisers and travel brands. Its platform embeds Interactive Media
+Units — polls, quizzes, trivia, debates and surveys — into publisher pages in 30+ languages, turns
+the resulting engagement into interactive ad inventory and first-party audience insight, and rewards
+participants through a points-based loyalty program and Web3 collectables (TravelVerse). It also
+operates a technology center offering custom development and integration services.
+
+## API surface
+
+**There is a live API. There is no published contract.**
+
+- The platform backend is live at `https://app-wleu.1worldonline.com/`. 1World Online's own frontend
+  configuration names it (`URL_SERVER_API_NEW`), and the host serves a Spring Boot Actuator index
+  whose self href names the same host — which is how first-party ownership was established.
+- No developer portal, API reference, OpenAPI, Swagger, GraphQL SDL, AsyncAPI, WSDL, Postman
+  collection, MCP server or A2A agent card is published anywhere. Every conventional specification
+  path on the API host and both website hosts returns 404, and `POST /graphql` returns 404.
+- No `/.well-known/` document is served on any host. Two hosts (`frontend-wleu`, `portal-wleu`) are
+  single-page-app catch-alls that answer 200 with an HTML shell for every path including a
+  negative-control path that cannot exist, so their 200s were discarded rather than recorded as hits.
+- A public Swagger UI for a 1World Online Polls API was once served at `http://api.1worldonline.com/`.
+  That host no longer resolves in DNS. Nothing from the archive was republished here as a contract.
+- Access runs through publisher/advertiser partner registration, not a self-serve developer key.
+
+## Artifacts
+
+| Path | What it records |
+|---|---|
+| `apis.yml` | APIs.json index — identity, links, and the one platform API entry |
+| `lifecycle/` | Versioning, the open Actuator health endpoint, and the retired public API host |
+| `plans/` | No published plans — recorded zero, with quotes from the provider's own pages |
+| `rate-limits/` | No published limits — recorded zero |
+| `packages/` | No first-party SDK — npm, PyPI and both GitHub accounts probed |
+| `mcp/` | No MCP server — `deployment.mode: none` |
+| `well-known/` | Full `/.well-known` probe record across six hosts, with soft-404 controls |
+| `security/` | TLS / HSTS / DNSSEC / CAA / SPF / DMARC probe |
+| `llms/` | Generated `llms.txt` (1World Online publishes none) |
+
+Links: https://1worldonline.com/ · https://welcome.1worldonline.com/ · https://github.com/1worldonline-rnd
