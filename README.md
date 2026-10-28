@@ -64,42 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-1World Online is an audience-engagement and interactive-advertising company, operating since 2012,
-that serves media publishers, advertisers and travel brands. Its platform embeds Interactive Media
-Units — polls, quizzes, trivia, debates and surveys — into publisher pages in 30+ languages, turns
-the resulting engagement into interactive ad inventory and first-party audience insight, and rewards
-participants through a points-based loyalty program and Web3 collectables (TravelVerse). It also
-operates a technology center offering custom development and integration services.
+1World Online is an audience-engagement and interactive-advertising company, operating since 2012, that serves media publishers, advertisers and travel brands. Its platform embeds Interactive Media Units — polls, quizzes, trivia, debates and surveys — into publisher pages in 30+ languages, turns the resulting engagement into interactive ad inventory and first-party audience insight, and rewards participants through a points-based loyalty program and Web3 collectables (TravelVerse). The company also operates a technology center offering custom development and integration services. Its platform backend is live at app-wleu.1worldonline.com and serves the publisher portal, widget frontend and loyalty applications, but 1World Online publishes no public developer portal, API reference or machine-readable contract today, and the historic public Swagger UI host api.1worldonline.com no longer resolves.
 
-## API surface
+**Areas:** Advertising · Audience Engagement · Polls · Surveys · Quizzes · Loyalty · Media · Publishing · Widgets · Web3
 
-**There is a live API. There is no published contract.**
+## 1World Online on APIs.io
 
-- The platform backend is live at `https://app-wleu.1worldonline.com/`. 1World Online's own frontend
-  configuration names it (`URL_SERVER_API_NEW`), and the host serves a Spring Boot Actuator index
-  whose self href names the same host — which is how first-party ownership was established.
-- No developer portal, API reference, OpenAPI, Swagger, GraphQL SDL, AsyncAPI, WSDL, Postman
-  collection, MCP server or A2A agent card is published anywhere. Every conventional specification
-  path on the API host and both website hosts returns 404, and `POST /graphql` returns 404.
-- No `/.well-known/` document is served on any host. Two hosts (`frontend-wleu`, `portal-wleu`) are
-  single-page-app catch-alls that answer 200 with an HTML shell for every path including a
-  negative-control path that cannot exist, so their 200s were discarded rather than recorded as hits.
-- A public Swagger UI for a 1World Online Polls API was once served at `http://api.1worldonline.com/`.
-  That host no longer resolves in DNS. Nothing from the archive was republished here as a contract.
-- Access runs through publisher/advertiser partner registration, not a self-serve developer key.
+Everything profiled for 1World Online is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/1worldonline/](https://apis.io/providers/1worldonline/)** — or go straight to one of the APIs or properties below.
 
-## Artifacts
+### APIs (1)
 
-| Path | What it records |
+- [1World Platform API](https://apis.io/apis/1worldonline/1worldonline-platform/) — The first-party HTTP backend behind the 1World Online publisher portal, widget frontend and loyalty applications. Its host is declared by 1World Online's…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [1Worldonline Domain Security](https://apis.io/security/1worldonline/1worldonline-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [1Worldonline Plans Pricing](https://apis.io/plans/1worldonline/1worldonline-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [1Worldonline Rate Limits](https://apis.io/rate-limits/1worldonline/1worldonline-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://1worldonline.com/)
+- [Sign up](https://frontend-wleu.1worldonline.com/#!/become-partner)
+- [Support](https://welcome.1worldonline.com/contact-us)
+- [Blog](https://medium.com/@1WorldOnline)
+- [Terms of service](https://welcome.1worldonline.com/terms)
+- [Privacy policy](https://welcome.1worldonline.com/terms/privacy-policy)
+- [GitHub](https://github.com/1worldonline-rnd)
+
+## API Evangelist rating
+
+**Kin Score 12.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `apis.yml` | APIs.json index — identity, links, and the one platform API entry |
-| `lifecycle/` | Versioning, the open Actuator health endpoint, and the retired public API host |
-| `plans/` | No published plans — recorded zero, with quotes from the provider's own pages |
-| `rate-limits/` | No published limits — recorded zero |
-| `packages/` | No first-party SDK — npm, PyPI and both GitHub accounts probed |
-| `mcp/` | No MCP server — `deployment.mode: none` |
-| `well-known/` | Full `/.well-known` probe record across six hosts, with soft-404 controls |
-| `security/` | TLS / HSTS / DNSSEC / CAA / SPF / DMARC probe |
-| `llms/` | Generated `llms.txt` (1World Online publishes none) |
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
 
-Links: https://1worldonline.com/ · https://welcome.1worldonline.com/ · https://github.com/1worldonline-rnd
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/1worldonline/](https://apis.io/providers/1worldonline/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for 1World Online: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/1worldonline/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
